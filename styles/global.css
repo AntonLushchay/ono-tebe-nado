@@ -1,13 +1,15 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  min-width: 1100px;
-  margin: 0;
-  font-family: Raleway, sans-serif;
+    min-width: 1100px;
+    max-width: 1440px;
+    margin: 0;
+    font-family: Raleway, sans-serif;
+    padding: 0px 50px;
 }
 
 h1,
@@ -21,14 +23,15 @@ ul,
 ol,
 li,
 blockquote {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: inherit;
+    color: inherit;
+    text-decoration: initial;
 }
 
 img {
-  width: 100%;
+    /* width: 100%; */
 }
