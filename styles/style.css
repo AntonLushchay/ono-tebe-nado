@@ -1,5 +1,7 @@
-/* т.к. с БЭМ еще не знаком, то вероятно, в нейминге классов полно косяков =) */
-/* А ещё сочувствую ревьюеру. Такой фигни я конечно нагромоздил =)), но работает же! =) */
+/* т.к. с БЭМ еще не знаком, то вероятно, в нейминге классов полно косяков
+/* А ещё сочувствую ревьюеру. Такой фигни я конечно нагромоздил =)), но работает же! */
+/* Думал задав всему боди изначально padding 50px по бокам, то облегчу все, но кажется, */
+/* проще было бы писать там где нужно margin 50px, чем бороться с последствиями =( */
 /* Заранее сорри и спасбо! */
 
 .header {
@@ -10,7 +12,7 @@
 }
 
 /* для pixel perfect пришлось подгонять. flex контейнер с align-items: centre; не дает нужной точности */
-.nav_style {
+.header__nav_style {
     padding: 44px 0px 45px 1px;
 }
 
@@ -20,6 +22,10 @@
     font-size: 18px;
     text-decoration: none;
     list-style-type: circle;
+}
+
+.list_non-marker-element {
+    list-style-type: none;
 }
 
 /* в global.css задал для <a> text-decoration: initial;. Таким образом реализовал обнуление стилей для ссылок, а уже для этих элементов добавил подчеркивание */
@@ -44,7 +50,9 @@
     line-height: 1.35;
 }
 
-.background-filter {
+/* Начало Cover  */
+
+.background-cover-filter {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -67,9 +75,7 @@
     background-size: cover;
 }
 
-/* На этом этапе я забил писать комменты =)) */
-
-.cover__title {
+.cover__title-conteiner {
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -91,16 +97,16 @@
 
 .cover__third-word {
     align-self: flex-end;
-    margin-top: -5px;
+    margin-top: -6px;
     margin-right: -30px;
 }
 
-.cover__title span {
+.cover__title-conteiner span {
     letter-spacing: 60px;
 }
 
 .cover__description {
-    padding: 126px 0px 0px 372px;
+    padding: 128px 0px 0px 372px;
     color: #fff;
     font-size: 22px;
     text-transform: uppercase;
@@ -119,7 +125,9 @@
 }
 
 .bet_button {
-    margin-left: 74px;
+    /* для идеального perfectPixel нужно паддинг 74px, но тогда у меня на Full HD мониторе съезжает кнопка на вторую строчку. */
+    /* Из-за этой особенности монитоов я решил сделать так, что бы везде ок смотрелось, и на 4к монике тоже, пожертвовав этим самым perfictPixel */
+    margin-left: 72px;
     border: 1px solid #fff;
     padding: 12px 32px;
     color: #fff;
@@ -127,6 +135,8 @@
     text-transform: uppercase;
     background-color: rgba(28, 28, 28, 0);
 }
+
+/* начало LOTS */
 
 .section__lots {
     position: relative;
@@ -144,10 +154,55 @@
     text-transform: uppercase;
 }
 
-.card {
+.cards {
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
+    justify-content: space-between;
     width: 430px;
     height: 450px;
+    padding: 50px 40px;
+    background-position: center;
+    background-size: contain;
+}
+
+.background-lots-filter {
+    position: absolute;
+    z-index: -1;
+    width: 430px;
+    height: 450px;
+    margin-top: -50px;
+    margin-left: -40px;
+    opacity: 0.6;
+    background-color: black;
+}
+
+.first-card {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.second-card {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.third-card {
+    background-image: url(../images/card-lot-03.jpg);
+}
+
+.section__lots h3 {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.19;
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-transform: uppercase;
+}
+
+.section__lots p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .lots__look-more-link {
@@ -159,12 +214,72 @@
     text-underline-offset: 4px;
 }
 
-.bg-for-img {
+/* начинается секция ABOUT */
+
+.about {
+    padding: 145px 0 90px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.about__logo-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    margin-left: 95px;
+    border-radius: 120px;
     background-color: black;
+}
+
+/* Гриды только тут решил применить... а это блин удобно! =)  */
+.about__text-conteiner {
+    display: grid;
+    grid-template-rows: 47px 100px 96px 25px 119px;
+    width: 885px;
+    color: #000;
+    font-size: 20px;
+    padding-top: 101px;
+}
+
+.about__title {
+    grid-row: 1/2;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.about__text_first-part {
+    grid-row: 3/4;
+}
+
+.about__text_second-part {
+    grid-row: 5/6;
+}
+
+/* Начинается FOOTER */
+
+.footer {
+    padding: 90px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__nav_style {
+    padding: 0 0px 45px 1px;
+}
+
+.list__footer_style {
+    text-align: center;
+    list-style-type: none;
+    font-size: 18px;
 }
 
 .logos {
     display: flex;
+    justify-content: space-between;
     width: 240px;
     height: 48px;
 }

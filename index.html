@@ -11,9 +11,9 @@
     </head>
     <body>
         <header class="header">
-            <nav class="nav_style">
+            <nav class="header__nav_style">
                 <ul class="list__header_style">
-                    <li type="none">
+                    <li class="list_non-marker-element">
                         <a href="#0">главная</a>
                     </li>
                     <li>
@@ -28,15 +28,15 @@
                     </li>
                 </ul>
             </nav>
-            <img
-                class="logo__black"
-                src="./images/logo-black.svg"
-                alt=""
-                title="Лого проекта"
-                href="#0"
-                width="148"
-                height="105"
-            />
+            <a href="#0"
+                ><img
+                    class="logo__black"
+                    src="./images/logo-black.svg"
+                    alt='logo "оно тебе надо"'
+                    title="Лого проекта"
+                    width="148"
+                    height="105"
+            /></a>
             <address class="address">
                 <a class="link__header_underlined-element" href="tel:+70000000"
                     >+9 999 555 5555</a
@@ -51,11 +51,13 @@
         </header>
         <main>
             <section class="cover">
-                <div class="background-filter"></div>
-                <div class="cover__title">
-                    <p>о<span>н</span>о</p>
-                    <p class="cover__second-word">те<span>б</span>е</p>
-                    <p class="cover__third-word"><span>н</span>адо</p>
+                <div class="background-cover-filter"></div>
+                <div class="cover__title-conteiner">
+                    <!-- Нельзя больше одного <h1> в документе, но и нельзя в <h1> вкладывать <p> -->
+                    <!-- На текущий вариант хотя бы https://validator.w3.org/ не ругается -->
+                    <h1>о<span>н</span>о</h1>
+                    <h1 class="cover__second-word">те<span>б</span>е</h1>
+                    <h1 class="cover__third-word"><span>н</span>адо</h1>
                 </div>
                 <div class="cover__description">
                     <p>
@@ -82,17 +84,17 @@
             </section>
             <section class="section__lots">
                 <h2 class="lots__title">Лоты</h2>
-                <div class="card">
-                    <h3 class="card-title">
-                        Фильм режиссёра, который бросил киношколу
-                    </h3>
+                <article class="cards first-card">
+                    <div class="background-lots-filter"></div>
+                    <h3>Фильм режиссёра, который бросил киношколу</h3>
                     <p>
                         Не просто бросил, а ушёл с первой лекции. Какой была бы
                         ваша ставка, если бы вы не знали, что режиссёр — Пол
                         Томас Андерсон?
                     </p>
-                </div>
-                <div class="card">
+                </article>
+                <article class="cards second-card">
+                    <div class="background-lots-filter"></div>
                     <h3>
                         Книга, где описан один скучный день из жизни рекламного
                         агента
@@ -105,8 +107,9 @@
                         накладывается на эпическую поэму Гомера. Сколько бы вы
                         поставили на «Улисса» Джеймса Джойса?
                     </p>
-                </div>
-                <div class="card">
+                </article>
+                <article class="cards third-card">
+                    <div class="background-lots-filter"></div>
                     <h3>
                         Картина, которую повторит даже 5-летний сын маминой
                         подруги
@@ -118,72 +121,74 @@
                         если бы не знали, что это — одна из революционных работ
                         Кандинского?
                     </p>
-                </div>
-                <a class="lots__look-more-link">посмотреть больше</a>
+                </article>
+                <a class="lots__look-more-link" href="#0">посмотреть больше</a>
             </section>
-            <section>
-                <div>
-                    <div class="bg-for-img">
-                        <img
-                            src="./images/logo-white.svg"
-                            alt=""
-                            width="148"
-                            height="105"
-                        />
-                    </div>
-                    <div>
-                        <h3>ОБ АУКЦИОНЕ</h3>
-                        <div>
-                            <p>
-                                Здесь вы не встретите очередное пафосное
-                                собрание невероятно дорогого антиквариата. Наши
-                                лоты вообще не должны были попасть ни на один
-                                аукцион. Потому что кому нужен дневник
-                                девочки-подростка или картина, которую может
-                                нарисовать даже ребёнок? Кому нужны все эти
-                                странные вещи, созданные любителями?
-                            </p>
-                            <p>
-                                Слишком сложные или, наоборот, слишком простые.
-                                Опережающие своё время. В пух и прах
-                                растерзанные критиками. Непринятые и непонятые.
-                                Когда-то они казались просто неудачными. Но,
-                                несмотря на критику, кажущуюся простоту или
-                                сложность, сейчас без этих лотов невозможно
-                                представить современную культуру. Когда в эти
-                                вещи не верил никто, продолжали верить их
-                                создатели. И сейчас эти лоты стали культовыми.
-                            </p>
-                        </div>
-                    </div>
+            <section class="about">
+                <div class="about__logo-conteiner">
+                    <img
+                        src="./images/logo-white.svg"
+                        alt='logo "оно тебе надо"'
+                        width="148"
+                        height="114"
+                    />
+                </div>
+                <div class="about__text-conteiner">
+                    <h3 class="about__title">ОБ АУКЦИОНЕ</h3>
+                    <p class="about__text_first-part">
+                        Здесь вы не встретите очередное пафосное собрание
+                        невероятно дорогого антиквариата. Наши лоты вообще не
+                        должны были попасть ни на один аукцион. Потому что кому
+                        нужен дневник девочки-подростка или картина, которую
+                        может нарисовать даже ребёнок? Кому нужны все эти
+                        странные вещи, созданные любителями?
+                    </p>
+                    <p class="about__text_second-part">
+                        Слишком сложные или, наоборот, слишком простые.
+                        Опережающие своё время. В пух и прах растерзанные
+                        критиками. Непринятые и непонятые. Когда-то они казались
+                        просто неудачными. Но, несмотря на критику, кажущуюся
+                        простоту или сложность, сейчас без этих лотов невозможно
+                        представить современную культуру. Когда в эти вещи не
+                        верил никто, продолжали верить их создатели. И сейчас
+                        эти лоты стали культовыми.
+                    </p>
                 </div>
             </section>
         </main>
-        <footer>
-            <div>
-                <div>
-                    <p>+9 999 555 5555</p>
-                    <p>info@sobaka.ge</p>
-                    <p>наб. Принсенграхт 263-265, Амстердам</p>
-                </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <p>главная</p>
-                        </li>
-                        <li>
-                            <p>посмотреть лоты</p>
-                        </li>
-                        <li>
-                            <p>об аукционе</p>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="logos">
-                    <img src="./images/yt.svg" alt="" />
-                    <img src="./images/vk.svg" alt="" />
-                    <img src="./images/pinterest.svg" alt="" />
-                </div>
+        <footer class="footer">
+            <address class="address">
+                <a class="link__header_underlined-element" href="tel:+70000000"
+                    >+9 999 555 5555</a
+                >
+                <a
+                    class="link__header_underlined-element"
+                    href="mailto:mail@example.com"
+                    >info@sobaka.ge</a
+                >
+                <p>наб. Принсенграхт 263-265,<br />Амстердам</p>
+            </address>
+            <nav class="footer__nav_style">
+                <ul class="list__footer_style">
+                    <li>
+                        <a href="#0">главная</a>
+                    </li>
+                    <li>
+                        <a class="link__header_underlined-element" href="#0"
+                            >посмотреть лоты</a
+                        >
+                    </li>
+                    <li>
+                        <a class="link__header_underlined-element" href="#0"
+                            >об аукционе</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="logos">
+                <img src="./images/yt.svg" alt="YouTube logo" />
+                <img src="./images/vk.svg" alt="VK logo" />
+                <img src="./images/pinterest.svg" alt="Pinterest logo" />
             </div>
         </footer>
     </body>
