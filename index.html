@@ -28,7 +28,7 @@
                     </li>
                 </ul>
             </nav>
-            <a href="#0"
+            <a
                 ><img
                     class="logo__black"
                     src="./images/logo-black.svg"
@@ -38,12 +38,14 @@
                     height="105"
             /></a>
             <address class="address">
-                <a class="link__header_underlined-element" href="tel:+70000000"
+                <a
+                    class="link__header_underlined-element"
+                    href="tel:+99995555555"
                     >+9 999 555 5555</a
                 >
                 <a
                     class="link__header_underlined-element"
-                    href="mailto:mail@example.com"
+                    href="mailto:info@sobaka.ge"
                     >info@sobaka.ge</a
                 >
                 <p>наб. Принсенграхт 263-265,<br />Амстердам</p>
@@ -52,13 +54,20 @@
         <main>
             <section class="cover">
                 <div class="background-cover-filter"></div>
-                <div class="cover__title-conteiner">
-                    <!-- Нельзя больше одного <h1> в документе, но и нельзя в <h1> вкладывать <p> -->
-                    <!-- На текущий вариант хотя бы https://validator.w3.org/ не ругается -->
-                    <h1>о<span>н</span>о</h1>
-                    <h1 class="cover__second-word">те<span>б</span>е</h1>
-                    <h1 class="cover__third-word"><span>н</span>адо</h1>
-                </div>
+                <h1 class="cover__title-conteiner">
+                    <span
+                        >о<span class="cover__first-letter-spacing">н</span
+                        >о</span
+                    >
+                    <span class="cover__second-word"
+                        >те<span class="cover__second-letter-spacing">б</span
+                        >е</span
+                    >
+                    <span class="cover__third-word"
+                        ><span class="cover__third-letter-spacing">н</span
+                        >адо</span
+                    >
+                </h1>
                 <div class="cover__description">
                     <p>
                         Аукцио<span class="cover_description__latter-spaces"
@@ -84,44 +93,63 @@
             </section>
             <section class="section__lots">
                 <h2 class="lots__title">Лоты</h2>
-                <article class="cards first-card">
-                    <div class="background-lots-filter"></div>
-                    <h3>Фильм режиссёра, который бросил киношколу</h3>
-                    <p>
-                        Не просто бросил, а ушёл с первой лекции. Какой была бы
-                        ваша ставка, если бы вы не знали, что режиссёр — Пол
-                        Томас Андерсон?
-                    </p>
-                </article>
-                <article class="cards second-card">
-                    <div class="background-lots-filter"></div>
-                    <h3>
-                        Книга, где описан один скучный день из жизни рекламного
-                        агента
-                    </h3>
-                    <p>
-                        Объёмом почти в тысячу страниц. Иногда без знаков
-                        препинания и с переходами на древнеанглийский. В ней
-                        одновременно рассказывается о 16 июня 1904 года и об
-                        истории литературы, начиная с античных времён. И это всё
-                        накладывается на эпическую поэму Гомера. Сколько бы вы
-                        поставили на «Улисса» Джеймса Джойса?
-                    </p>
-                </article>
-                <article class="cards third-card">
-                    <div class="background-lots-filter"></div>
-                    <h3>
-                        Картина, которую повторит даже 5-летний сын маминой
-                        подруги
-                    </h3>
-                    <p>
-                        Ну действительно, там линия, тут кружочек, а здесь и
-                        вовсе что-то похожее на инфузорию-туфельку. Никаких
-                        полей, лесов, котиков… Сколько бы вы на такое поставили,
-                        если бы не знали, что это — одна из революционных работ
-                        Кандинского?
-                    </p>
-                </article>
+                <ul class="lots__list">
+                    <li class="lots__list-elements">
+                        <a>
+                            <article class="cards first-card">
+                                <div class="background-lots-filter"></div>
+                                <h3>
+                                    Фильм режиссёра, который бросил киношколу
+                                </h3>
+                                <p>
+                                    Не просто бросил, а ушёл с первой лекции.
+                                    Какой была бы ваша ставка, если бы вы не
+                                    знали, что режиссёр — Пол Томас Андерсон?
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="lots__list-elements">
+                        <a>
+                            <article class="cards second-card">
+                                <div class="background-lots-filter"></div>
+                                <h3>
+                                    Книга, где описан один скучный день из жизни
+                                    рекламного агента
+                                </h3>
+                                <p>
+                                    Объёмом почти в тысячу страниц. Иногда без
+                                    знаков препинания и с переходами на
+                                    древнеанглийский. В ней одновременно
+                                    рассказывается о 16 июня 1904 года и об
+                                    истории литературы, начиная с античных
+                                    времён. И это всё накладывается на эпическую
+                                    поэму Гомера. Сколько бы вы поставили на
+                                    «Улисса» Джеймса Джойса?
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="lots__list-elements">
+                        <a>
+                            <article class="cards third-card">
+                                <div class="background-lots-filter"></div>
+                                <h3>
+                                    Картина, которую повторит даже 5-летний сын
+                                    маминой подруги
+                                </h3>
+                                <p>
+                                    Ну действительно, там линия, тут кружочек, а
+                                    здесь и вовсе что-то похожее на
+                                    инфузорию-туфельку. Никаких полей, лесов,
+                                    котиков… Сколько бы вы на такое поставили,
+                                    если бы не знали, что это — одна из
+                                    революционных работ Кандинского?
+                                </p>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
                 <a class="lots__look-more-link" href="#0">посмотреть больше</a>
             </section>
             <section class="about">
@@ -134,36 +162,40 @@
                     />
                 </div>
                 <div class="about__text-conteiner">
-                    <h3 class="about__title">ОБ АУКЦИОНЕ</h3>
-                    <p class="about__text_first-part">
-                        Здесь вы не встретите очередное пафосное собрание
-                        невероятно дорогого антиквариата. Наши лоты вообще не
-                        должны были попасть ни на один аукцион. Потому что кому
-                        нужен дневник девочки-подростка или картина, которую
-                        может нарисовать даже ребёнок? Кому нужны все эти
-                        странные вещи, созданные любителями?
-                    </p>
-                    <p class="about__text_second-part">
-                        Слишком сложные или, наоборот, слишком простые.
-                        Опережающие своё время. В пух и прах растерзанные
-                        критиками. Непринятые и непонятые. Когда-то они казались
-                        просто неудачными. Но, несмотря на критику, кажущуюся
-                        простоту или сложность, сейчас без этих лотов невозможно
-                        представить современную культуру. Когда в эти вещи не
-                        верил никто, продолжали верить их создатели. И сейчас
-                        эти лоты стали культовыми.
-                    </p>
+                    <h2 class="about__title">об аукционе</h2>
+                    <div class="about__text-container">
+                        <p>
+                            Здесь вы не встретите очередное пафосное собрание
+                            невероятно дорогого антиквариата. Наши лоты вообще
+                            не должны были попасть ни на один аукцион. Потому
+                            что кому нужен дневник девочки-подростка или
+                            картина, которую может нарисовать даже ребёнок? Кому
+                            нужны все эти странные вещи, созданные любителями?
+                        </p>
+                        <p>
+                            Слишком сложные или, наоборот, слишком простые.
+                            Опережающие своё время. В пух и прах растерзанные
+                            критиками. Непринятые и непонятые. Когда-то они
+                            казались просто неудачными. Но, несмотря на критику,
+                            кажущуюся простоту или сложность, сейчас без этих
+                            лотов невозможно представить современную культуру.
+                            Когда в эти вещи не верил никто, продолжали верить
+                            их создатели. И сейчас эти лоты стали культовыми.
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
             <address class="address">
-                <a class="link__header_underlined-element" href="tel:+70000000"
+                <a
+                    class="link__header_underlined-element"
+                    href="tel:+79995555555"
                     >+9 999 555 5555</a
                 >
                 <a
                     class="link__header_underlined-element"
-                    href="mailto:mail@example.com"
+                    href="mailto:info@sobaka.ge"
                     >info@sobaka.ge</a
                 >
                 <p>наб. Принсенграхт 263-265,<br />Амстердам</p>
@@ -185,11 +217,38 @@
                     </li>
                 </ul>
             </nav>
-            <div class="logos">
-                <img src="./images/yt.svg" alt="YouTube logo" />
-                <img src="./images/vk.svg" alt="VK logo" />
-                <img src="./images/pinterest.svg" alt="Pinterest logo" />
-            </div>
+            <ul class="footer__logos_list">
+                <li>
+                    <a>
+                        <img
+                            src="./images/yt.svg"
+                            alt="YouTube логотип"
+                            width="48"
+                            height="48"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img
+                            src="./images/vk.svg"
+                            alt="VK логотип"
+                            width="48"
+                            height="48"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img
+                            src="./images/pinterest.svg"
+                            alt="Pinterest логотип"
+                            width="48"
+                            height="48"
+                        />
+                    </a>
+                </li>
+            </ul>
         </footer>
     </body>
 </html>
