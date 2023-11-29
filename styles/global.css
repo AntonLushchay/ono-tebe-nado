@@ -6,7 +6,7 @@
 
 body {
     min-width: 1100px;
-    /* дабы не допустить проблемы со скриншотными текстами, оставлю свойство max-width */
+    /* дабы не допустить проблемы со скриншотными тестами, оставлю свойство max-width */
     max-width: 1440px;
     margin: 0 auto;
     font-family: Raleway, sans-serif;
